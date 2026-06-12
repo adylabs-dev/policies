@@ -4,25 +4,26 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — Verso</title>
-<style>
-  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;max-width:720px;margin:0 auto;padding:48px 24px;color:#1a1a1a;line-height:1.65}
-  h1{font-size:1.7rem;margin-bottom:.25rem}
-  h2{font-size:1.2rem;margin-top:2rem}
-  .meta{color:#666;font-size:.9rem;margin-top:0}
-  ul{padding-left:1.2rem}
-  li{margin:.35rem 0}
-  a{color:#0b57d0}
-  table{border-collapse:collapse;width:100%;font-size:.92rem}
-  th,td{border:1px solid #ddd;padding:8px 10px;text-align:left;vertical-align:top}
-  th{background:#f7f7f7}
-  footer{margin-top:48px;color:#888;font-size:.85rem;border-top:1px solid #eee;padding-top:16px}
-</style>
+<script>(function(){var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h1>Privacy Policy — Verso</h1>
-<p class="meta">App: <strong>Verso — PDF Reader &amp; AI Tools</strong> (package <code>com.adylabs.verso</code>)<br>
-Developer: AdyLabs · Contact: <a href="mailto:adylabs.android@gmail.com">adylabs.android@gmail.com</a><br>
-Effective date: June 12, 2026</p>
+<div class="page">
+<header class="topbar">
+  <div class="mark" aria-hidden="true"><span class="sq"></span><span class="ci"></span><span class="tri"></span></div>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">Dark</button>
+</header>
+
+<p class="eyebrow">Verso · Privacy</p>
+<h1>Privacy Policy.</h1>
+<div class="meta-card">
+  App: <strong>Verso — PDF Reader &amp; AI Tools</strong> <span class="mono">(com.adylabs.verso)</span><br>
+  Developer: AdyLabs · Contact: <a href="mailto:adylabs.android@gmail.com">adylabs.android@gmail.com</a><br>
+  Effective date: <span class="mono">June 12, 2026</span>
+</div>
 
 <p>This policy explains what data Verso collects, why, and what control you have over it.
 The short version: <strong>your documents live on your device</strong>, you never create an
@@ -46,10 +47,11 @@ identifier that is not linked to your identity and that we cannot use to identif
       your device and is never visible to us.</li>
 </ul>
 
-<h2>3. AI features (Chat, Flashcards, Quizzes, Summaries, Translation)</h2>
-<p>When you explicitly use an AI feature, the relevant document text (and your prompts) is
-sent over an encrypted connection (TLS) to our backend (Firebase Cloud Functions on Google
-Cloud), which forwards it to Google's Gemini models to generate the response.</p>
+<h2>3. AI features</h2>
+<p>When you explicitly use an AI feature (Chat, Flashcards, Quizzes, Summaries,
+Translation), the relevant document text (and your prompts) is sent over an encrypted
+connection (TLS) to our backend (Firebase Cloud Functions on Google Cloud), which forwards
+it to Google's Gemini models to generate the response.</p>
 <ul>
   <li>Content is sent <strong>only when you initiate</strong> an AI action — never in the background.</li>
   <li>We do <strong>not</strong> use your documents or conversations to train AI models.</li>
@@ -80,12 +82,12 @@ We never see your payment details. We use <strong>RevenueCat</strong> to validat
 and manage entitlements; RevenueCat receives your purchase token and the app's anonymous
 user ID — see the <a href="https://www.revenuecat.com/privacy">RevenueCat privacy policy</a>.</p>
 
-<h2>6. Analytics and crash reporting</h2>
+<h2>6. Analytics &amp; crash reporting</h2>
 <p>We use Firebase Analytics and Firebase Crashlytics to understand aggregate feature usage
 and to fix crashes. This involves pseudonymous identifiers, device model, OS version, and
 event/crash data. It never includes the contents of your documents.</p>
 
-<h2>7. Summary of data we process</h2>
+<h2>7. Data we process</h2>
 <table>
 <tr><th>Data</th><th>Purpose</th><th>Where</th></tr>
 <tr><td>Documents you open/edit</td><td>All PDF tools, OCR, scanning</td><td>On your device only</td></tr>
@@ -100,7 +102,7 @@ event/crash data. It never includes the contents of your documents.</p>
 <p>We do <strong>not</strong> sell your data, and we do not share it with third parties
 except the processors listed above (Google and RevenueCat), which act on our behalf.</p>
 
-<h2>8. Data retention and deletion</h2>
+<h2>8. Retention &amp; deletion</h2>
 <p>Server-side data tied to your anonymous ID (usage counters, saved server-side records,
 content reports) is kept only as long as needed for the purposes above. You can delete it
 at any time:</p>
@@ -133,10 +135,18 @@ the most effective controls are the in-app deletion tool and the consent setting
 above. For anything else, contact us and we will help:
 <a href="mailto:adylabs.android@gmail.com">adylabs.android@gmail.com</a>.</p>
 
-<h2>12. Changes to this policy</h2>
+<h2>12. Changes</h2>
 <p>If we change this policy, we will update this page and the effective date above.
 Material changes will also be announced in the app.</p>
 
-<footer>© 2026 AdyLabs · <a href="index.html">All policies</a></footer>
+<footer><span>© 2026 AdyLabs</span><span><a href="index.html">All policies</a></span></footer>
+</div>
+<script>
+var b=document.getElementById("themeToggle");
+function eff(){var t=document.documentElement.dataset.theme;return t||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}
+function label(){b.textContent=eff()==="dark"?"Light":"Dark"}
+b.addEventListener("click",function(){var n=eff()==="dark"?"light":"dark";document.documentElement.dataset.theme=n;localStorage.setItem("theme",n);label()});
+label();
+</script>
 </body>
 </html>

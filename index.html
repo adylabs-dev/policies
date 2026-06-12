@@ -4,30 +4,44 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AdyLabs — Policies</title>
-<style>
-  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;max-width:720px;margin:0 auto;padding:48px 24px;color:#1a1a1a;line-height:1.6}
-  h1{font-size:1.9rem;margin-bottom:.25rem}
-  .sub{color:#666;margin-top:0}
-  ul{padding-left:1.2rem}
-  li{margin:.5rem 0}
-  a{color:#0b57d0}
-  footer{margin-top:48px;color:#888;font-size:.85rem;border-top:1px solid #eee;padding-top:16px}
-</style>
+<script>(function(){var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h1>AdyLabs</h1>
-<p class="sub">Policies and legal documents for AdyLabs apps.</p>
+<div class="page">
+<header class="topbar">
+  <div class="mark" aria-hidden="true"><span class="sq"></span><span class="ci"></span><span class="tri"></span></div>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">Dark</button>
+</header>
+
+<p class="eyebrow">AdyLabs · Legal</p>
+<h1>Policies.</h1>
+<p>Policies and legal documents for AdyLabs apps.</p>
 
 <h2>Verso — PDF Reader &amp; AI Tools</h2>
-<ul>
-  <li><a href="privacy-policy.html">Privacy Policy</a></li>
-  <li><a href="terms-of-service.html">Terms of Service</a></li>
-  <li><a href="data-deletion.html">Data Deletion</a></li>
+<ul class="doc-list">
+  <li><a href="privacy-policy.html">Privacy Policy
+    <span class="desc">What data Verso collects, why, and what control you have over it.</span></a></li>
+  <li><a href="terms-of-service.html">Terms of Service
+    <span class="desc">License, acceptable use, AI features, subscriptions.</span></a></li>
+  <li><a href="data-deletion.html">Data Deletion
+    <span class="desc">How to delete your data, in the app or by email.</span></a></li>
 </ul>
 
 <h2>Contact</h2>
 <p>Questions about any of these documents: <a href="mailto:adylabs.android@gmail.com">adylabs.android@gmail.com</a></p>
 
-<footer>© 2026 AdyLabs. All rights reserved.</footer>
+<footer><span>© 2026 AdyLabs. All rights reserved.</span></footer>
+</div>
+<script>
+var b=document.getElementById("themeToggle");
+function eff(){var t=document.documentElement.dataset.theme;return t||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}
+function label(){b.textContent=eff()==="dark"?"Light":"Dark"}
+b.addEventListener("click",function(){var n=eff()==="dark"?"light":"dark";document.documentElement.dataset.theme=n;localStorage.setItem("theme",n);label()});
+label();
+</script>
 </body>
 </html>

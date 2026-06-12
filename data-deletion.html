@@ -4,29 +4,30 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Data Deletion — Verso</title>
-<style>
-  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;max-width:720px;margin:0 auto;padding:48px 24px;color:#1a1a1a;line-height:1.65}
-  h1{font-size:1.7rem;margin-bottom:.25rem}
-  h2{font-size:1.2rem;margin-top:2rem}
-  .meta{color:#666;font-size:.9rem;margin-top:0}
-  ol,ul{padding-left:1.2rem}
-  li{margin:.35rem 0}
-  a{color:#0b57d0}
-  table{border-collapse:collapse;width:100%;font-size:.92rem}
-  th,td{border:1px solid #ddd;padding:8px 10px;text-align:left;vertical-align:top}
-  th{background:#f7f7f7}
-  footer{margin-top:48px;color:#888;font-size:.85rem;border-top:1px solid #eee;padding-top:16px}
-</style>
+<script>(function(){var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h1>Data Deletion — Verso</h1>
-<p class="meta">App: <strong>Verso — PDF Reader &amp; AI Tools</strong> (package <code>com.adylabs.verso</code>)<br>
-Developer: AdyLabs · Contact: <a href="mailto:adylabs.android@gmail.com">adylabs.android@gmail.com</a></p>
+<div class="page">
+<header class="topbar">
+  <div class="mark" aria-hidden="true"><span class="sq"></span><span class="ci"></span><span class="tri"></span></div>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">Dark</button>
+</header>
+
+<p class="eyebrow">Verso · Data Deletion</p>
+<h1>Data Deletion.</h1>
+<div class="meta-card">
+  App: <strong>Verso — PDF Reader &amp; AI Tools</strong> <span class="mono">(com.adylabs.verso)</span><br>
+  Developer: AdyLabs · Contact: <a href="mailto:adylabs.android@gmail.com">adylabs.android@gmail.com</a>
+</div>
 
 <p>Verso has no user accounts — the app uses an anonymous identifier. This page explains
 how to delete the data associated with that identifier and the data stored on your device.</p>
 
-<h2>Delete your server-side data (in the app)</h2>
+<h2>In the app</h2>
 <ol>
   <li>Open Verso.</li>
   <li>Go to <strong>Settings</strong>.</li>
@@ -36,7 +37,7 @@ how to delete the data associated with that identifier and the data stored on yo
 AI usage counters, server-side records, and any AI content reports you submitted. This
 action cannot be undone, and your free-tier usage history will start fresh.</p>
 
-<h2>Delete your on-device data</h2>
+<h2>On your device</h2>
 <ul>
   <li><strong>Uninstall the app</strong>, or use Android Settings → Apps → Verso →
       Storage → <em>Clear storage</em>. This removes documents stored in the app's private
@@ -45,14 +46,14 @@ action cannot be undone, and your free-tier usage history will start fresh.</p>
       yours and are untouched — delete them with your file manager if you wish.</li>
 </ul>
 
-<h2>Request deletion by email</h2>
+<h2>By email</h2>
 <p>If you cannot use the in-app option (for example, you already uninstalled the app),
 email <a href="mailto:adylabs.android@gmail.com?subject=Verso%20data%20deletion%20request">adylabs.android@gmail.com</a>
 with the subject "Verso data deletion request". Note that because identifiers are
 anonymous, we may be unable to locate your records without information from your device;
 we will respond within 30 days.</p>
 
-<h2>What is deleted, what is retained</h2>
+<h2>Deleted vs. retained</h2>
 <table>
 <tr><th>Data</th><th>Deleted by</th><th>Notes</th></tr>
 <tr><td>AI usage counters, server-side records, content reports</td><td>In-app "Delete my data" (or email request)</td><td>Immediate and permanent</td></tr>
@@ -61,6 +62,14 @@ we will respond within 30 days.</p>
 <tr><td>Aggregated analytics &amp; crash data</td><td>—</td><td>Pseudonymous, contains no document content; retained per Firebase default retention</td></tr>
 </table>
 
-<footer>© 2026 AdyLabs · <a href="index.html">All policies</a> · <a href="privacy-policy.html">Privacy Policy</a></footer>
+<footer><span>© 2026 AdyLabs</span><span><a href="index.html">All policies</a> · <a href="privacy-policy.html">Privacy Policy</a></span></footer>
+</div>
+<script>
+var b=document.getElementById("themeToggle");
+function eff(){var t=document.documentElement.dataset.theme;return t||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}
+function label(){b.textContent=eff()==="dark"?"Light":"Dark"}
+b.addEventListener("click",function(){var n=eff()==="dark"?"light":"dark";document.documentElement.dataset.theme=n;localStorage.setItem("theme",n);label()});
+label();
+</script>
 </body>
 </html>
