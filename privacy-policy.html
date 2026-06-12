@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Verso</title>
+<style>
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;max-width:720px;margin:0 auto;padding:48px 24px;color:#1a1a1a;line-height:1.65}
+  h1{font-size:1.7rem;margin-bottom:.25rem}
+  h2{font-size:1.2rem;margin-top:2rem}
+  .meta{color:#666;font-size:.9rem;margin-top:0}
+  ul{padding-left:1.2rem}
+  li{margin:.35rem 0}
+  a{color:#0b57d0}
+  table{border-collapse:collapse;width:100%;font-size:.92rem}
+  th,td{border:1px solid #ddd;padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:#f7f7f7}
+  footer{margin-top:48px;color:#888;font-size:.85rem;border-top:1px solid #eee;padding-top:16px}
+</style>
+</head>
+<body>
+<h1>Privacy Policy — Verso</h1>
+<p class="meta">App: <strong>Verso — PDF Reader &amp; AI Tools</strong> (package <code>com.adylabs.verso</code>)<br>
+Developer: AdyLabs · Contact: <a href="mailto:adylabs.android@gmail.com">adylabs.android@gmail.com</a><br>
+Effective date: June 12, 2026</p>
+
+<p>This policy explains what data Verso collects, why, and what control you have over it.
+The short version: <strong>your documents live on your device</strong>, you never create an
+account, and the only document content that ever leaves your device is the text you
+explicitly send to the AI features.</p>
+
+<h2>1. No account required</h2>
+<p>Verso has no sign-up and never asks for your name, email address, or any other contact
+details. To protect our AI service against abuse and to enforce fair-use limits, the app
+signs in <strong>anonymously</strong> with Firebase Authentication. This creates a random
+identifier that is not linked to your identity and that we cannot use to identify you.</p>
+
+<h2>2. Your documents</h2>
+<ul>
+  <li>PDFs and other files you open, scan, edit, merge, split, compress, protect, sign,
+      watermark, or redact are processed <strong>entirely on your device</strong>. They are
+      never uploaded for these operations.</li>
+  <li>Text recognition (OCR) and document scanning run <strong>on-device</strong> using
+      Google ML Kit. No image or text leaves your phone for OCR.</li>
+  <li>The app lock (PIN/biometric) is handled by your device. Biometric data never leaves
+      your device and is never visible to us.</li>
+</ul>
+
+<h2>3. AI features (Chat, Flashcards, Quizzes, Summaries, Translation)</h2>
+<p>When you explicitly use an AI feature, the relevant document text (and your prompts) is
+sent over an encrypted connection (TLS) to our backend (Firebase Cloud Functions on Google
+Cloud), which forwards it to Google's Gemini models to generate the response.</p>
+<ul>
+  <li>Content is sent <strong>only when you initiate</strong> an AI action — never in the background.</li>
+  <li>We do <strong>not</strong> use your documents or conversations to train AI models.</li>
+  <li>Requests are protected by Firebase App Check (Play Integrity), so only genuine
+      installs of the app can reach the service.</li>
+  <li>We store usage counters (number of AI requests) keyed to your anonymous identifier
+      to enforce free-tier and fair-use limits.</li>
+  <li>If you save an AI chat to your library, it is stored on your device. If you
+      <em>report</em> an AI response (for example as harmful or incorrect), the reported
+      conversation excerpt is transmitted and stored so we can review it.</li>
+  <li>AI output is generated automatically and may be inaccurate. Do not rely on it for
+      legal, medical, or financial decisions.</li>
+</ul>
+
+<h2>4. Advertising (free version)</h2>
+<p>The free version of Verso shows ads served by Google AdMob. In the European Economic
+Area, the United Kingdom, and Switzerland, no ad request is made until you have made a
+choice in the consent dialog (Google UMP). Depending on your consent, AdMob may process
+your advertising ID, IP address, and coarse device information to serve and measure ads —
+see <a href="https://policies.google.com/technologies/partner-sites">Google's privacy &amp;
+terms</a>. You can change your consent choice at any time in the app's settings, and you
+can reset your advertising ID in Android settings. Verso Pro and the ad-free upgrade
+remove all advertising.</p>
+
+<h2>5. Purchases</h2>
+<p>Subscriptions and one-time purchases are processed by <strong>Google Play Billing</strong>.
+We never see your payment details. We use <strong>RevenueCat</strong> to validate purchases
+and manage entitlements; RevenueCat receives your purchase token and the app's anonymous
+user ID — see the <a href="https://www.revenuecat.com/privacy">RevenueCat privacy policy</a>.</p>
+
+<h2>6. Analytics and crash reporting</h2>
+<p>We use Firebase Analytics and Firebase Crashlytics to understand aggregate feature usage
+and to fix crashes. This involves pseudonymous identifiers, device model, OS version, and
+event/crash data. It never includes the contents of your documents.</p>
+
+<h2>7. Summary of data we process</h2>
+<table>
+<tr><th>Data</th><th>Purpose</th><th>Where</th></tr>
+<tr><td>Documents you open/edit</td><td>All PDF tools, OCR, scanning</td><td>On your device only</td></tr>
+<tr><td>Document text you send to AI + prompts</td><td>Generate AI responses</td><td>Transmitted to our backend / Google AI; not used for training</td></tr>
+<tr><td>Anonymous user ID</td><td>Abuse prevention, usage quotas, entitlements</td><td>Firebase / our backend / RevenueCat</td></tr>
+<tr><td>AI usage counters</td><td>Free-tier and fair-use limits</td><td>Our backend</td></tr>
+<tr><td>Reported AI content</td><td>Safety review</td><td>Our backend (only if you submit a report)</td></tr>
+<tr><td>Purchase tokens</td><td>Validate Pro entitlement</td><td>Google Play / RevenueCat</td></tr>
+<tr><td>Advertising identifiers (free version, per consent)</td><td>Ads</td><td>Google AdMob</td></tr>
+<tr><td>Analytics &amp; crash data</td><td>Improve stability and features</td><td>Firebase</td></tr>
+</table>
+<p>We do <strong>not</strong> sell your data, and we do not share it with third parties
+except the processors listed above (Google and RevenueCat), which act on our behalf.</p>
+
+<h2>8. Data retention and deletion</h2>
+<p>Server-side data tied to your anonymous ID (usage counters, saved server-side records,
+content reports) is kept only as long as needed for the purposes above. You can delete it
+at any time:</p>
+<ul>
+  <li><strong>In the app:</strong> Settings → <em>Delete my data</em>. This removes the
+      server-side data associated with your anonymous identifier.</li>
+  <li><strong>By email:</strong> write to
+      <a href="mailto:adylabs.android@gmail.com">adylabs.android@gmail.com</a>.</li>
+  <li>Uninstalling the app removes all on-device data (your documents in the app's
+      storage, saved chats, preferences).</li>
+</ul>
+<p>See the dedicated <a href="data-deletion.html">data-deletion page</a> for step-by-step
+instructions. Records that Google Play keeps about your purchases are governed by Google's
+own policies and are not deleted by us.</p>
+
+<h2>9. Security</h2>
+<p>All network traffic is encrypted in transit (TLS). Backend endpoints require a valid
+Firebase App Check attestation from a genuine app install. Server-side databases are not
+publicly accessible.</p>
+
+<h2>10. Children</h2>
+<p>Verso is not directed at children under 13 (or the equivalent minimum age in your
+jurisdiction), and we do not knowingly collect personal data from children.</p>
+
+<h2>11. Your rights</h2>
+<p>Depending on where you live (e.g., GDPR in the EU/UK, CCPA in California), you may have
+rights to access, correct, delete, or object to the processing of your personal data.
+Because we hold almost no personal data and cannot identify you from an anonymous ID,
+the most effective controls are the in-app deletion tool and the consent settings described
+above. For anything else, contact us and we will help:
+<a href="mailto:adylabs.android@gmail.com">adylabs.android@gmail.com</a>.</p>
+
+<h2>12. Changes to this policy</h2>
+<p>If we change this policy, we will update this page and the effective date above.
+Material changes will also be announced in the app.</p>
+
+<footer>© 2026 AdyLabs · <a href="index.html">All policies</a></footer>
+</body>
+</html>
