@@ -93,11 +93,6 @@ body {
   /* keeps the dark icon tile visible on the dark background */
   box-shadow: 0 0 0 1px var(--outline);
 }
-.brand .wordmark {
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-}
 
 .theme-toggle {
   font-family: inherit;
