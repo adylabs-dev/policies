@@ -80,25 +80,23 @@ body {
   margin-bottom: 32px;
 }
 
-.mark {
+.brand {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--ink);
 }
-.mark .sq {
-  width: 14px; height: 14px;
-  background: var(--accent);
+.brand .logo {
+  display: block;
+  border-radius: 8px;
+  /* keeps the dark icon tile visible on the dark background */
+  box-shadow: 0 0 0 1px var(--outline);
 }
-.mark .ci {
-  width: 14px; height: 14px;
-  border-radius: 999px;
-  background: var(--ink);
-}
-.mark .tri {
-  width: 0; height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-bottom: 14px solid var(--gold);
+.brand .wordmark {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 .theme-toggle {
